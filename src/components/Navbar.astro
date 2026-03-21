@@ -8,10 +8,13 @@ const currentPath = Astro.url.pathname;
   <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16 lg:h-20">
       <!-- Logo -->
-      <a href={base} class="flex items-center gap-2 group">
-        <span class="text-2xl font-extrabold tracking-tight">
-          <span class="text-accent">In</span><span class="text-text-primary">Qubyte</span>
-        </span>
+      <a href={base} class="flex items-center group">
+        <img
+          src={`${base}logo-dark.png`}
+          alt={siteConfig.name}
+          class="h-10 lg:h-12 w-auto"
+          loading="eager"
+        />
       </a>
 
       <!-- Desktop Nav -->

@@ -22,7 +22,9 @@
       "Bash(git commit:*)",
       "Bash(git remote:*)",
       "Bash(git push:*)",
-      "Bash(ssh -T git@github.com)"
+      "Bash(ssh -T git@github.com)",
+      "WebFetch(domain:govikan.github.io)",
+      "Bash(brew install:*)"
     ]
   }
 }

@@ -1,0 +1,119 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import CTABanner from '../components/CTABanner.astro';
+import { siteConfig } from '../data/siteConfig';
+---
+
+<BaseLayout
+  title="Home"
+  description={siteConfig.description}
+>
+  <!-- Hero -->
+  <Hero
+    title="AI-Powered Innovation Meets Cloud Engineering"
+    subtitle="We build intelligent systems and cloud-native platforms that give businesses a competitive edge — from generative AI to scalable infrastructure."
+    ctaText="Start Your AI Journey"
+    ctaLink="/contact/"
+    secondaryCtaText="Explore Services"
+    secondaryCtaLink="/services/"
+  />
+
+  <!-- Services Overview -->
+  <section class="py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="fade-in-up">
+        <SectionHeading
+          title="What We Build"
+          subtitle="AI-driven solutions and cloud-native platforms for the modern enterprise"
+        />
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        {siteConfig.services.slice(0, 6).map((service, i) => (
+          <div class="fade-in-up" style={`transition-delay: ${i * 100}ms`}>
+            <ServiceCard
+              icon={service.icon}
+              title={service.title}
+              description={service.description}
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Stack -->
+  <section class="py-16 border-y border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="fade-in-up text-center mb-10">
+        <p class="text-text-secondary text-sm uppercase tracking-widest font-medium">Our Technology Stack</p>
+      </div>
+      <div class="flex flex-wrap justify-center gap-4 fade-in-up">
+        {siteConfig.techStack.map((tech) => (
+          <span class="px-4 py-2 text-sm font-mono font-medium text-text-secondary border border-white/10 rounded-lg hover:border-accent/40 hover:text-accent transition-all duration-200">
+            {tech}
+          </span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+        {siteConfig.stats.map((stat, i) => (
+          <div class="text-center fade-in-up" style={`transition-delay: ${i * 100}ms`}>
+            <div class="text-3xl md:text-4xl font-extrabold gradient-text">{stat.value}</div>
+            <div class="text-text-secondary text-sm mt-2">{stat.label}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why InQubyte -->
+  <section class="py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="fade-in-up">
+        <SectionHeading
+          title="Why InQubyte?"
+          subtitle="We bring deep AI expertise and cloud engineering under one roof"
+        />
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="fade-in-up text-center p-8">
+          <div class="w-14 h-14 mx-auto mb-5 rounded-xl bg-accent/10 flex items-center justify-center">
+            <svg class="w-7 h-7 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+          </div>
+          <h3 class="text-xl font-semibold text-text-primary mb-3">AI-Native Approach</h3>
+          <p class="text-text-secondary text-sm leading-relaxed">We don't bolt AI on as an afterthought. Every solution is designed with intelligence at its core — from LLM-powered workflows to predictive analytics.</p>
+        </div>
+        <div class="fade-in-up text-center p-8" style="transition-delay: 100ms">
+          <div class="w-14 h-14 mx-auto mb-5 rounded-xl bg-accent-secondary/10 flex items-center justify-center">
+            <svg class="w-7 h-7 text-accent-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
+          </div>
+          <h3 class="text-xl font-semibold text-text-primary mb-3">Cloud-Native at Scale</h3>
+          <p class="text-text-secondary text-sm leading-relaxed">Kubernetes, serverless, multi-cloud — we architect for elasticity and global scale with infrastructure as code and GitOps best practices.</p>
+        </div>
+        <div class="fade-in-up text-center p-8" style="transition-delay: 200ms">
+          <div class="w-14 h-14 mx-auto mb-5 rounded-xl bg-accent-tertiary/10 flex items-center justify-center">
+            <svg class="w-7 h-7 text-accent-tertiary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3 class="text-xl font-semibold text-text-primary mb-3">MLOps & Production AI</h3>
+          <p class="text-text-secondary text-sm leading-relaxed">We don't stop at prototypes. Our MLOps pipelines ensure your AI models are monitored, retrained, and continuously improving in production.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <CTABanner
+    heading="Ready to Harness the Power of AI?"
+    description="Let's explore how AI and cloud technology can accelerate your business. Book a free consultation."
+    buttonText="Book a Consultation"
+    buttonLink="/contact/"
+  />
+</BaseLayout>

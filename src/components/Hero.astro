@@ -1,0 +1,55 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+  ctaText?: string;
+  ctaLink?: string;
+  secondaryCtaText?: string;
+  secondaryCtaLink?: string;
+  compact?: boolean;
+}
+
+const { title, subtitle, ctaText, ctaLink, secondaryCtaText, secondaryCtaLink, compact = false } = Astro.props;
+---
+
+<section class:list={['relative overflow-hidden flex items-center', compact ? 'pt-28 pb-16 lg:pt-36 lg:pb-20' : 'min-h-[90vh] pt-20']}>
+  <!-- Background -->
+  <div class="absolute inset-0 -z-10">
+    <div class="absolute inset-0 bg-gradient-to-br from-bg-primary via-[#1e1b4b]/30 to-bg-primary"></div>
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/10 rounded-full blur-[120px]"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-tertiary/10 rounded-full blur-[120px]"></div>
+    <!-- Grid pattern -->
+    <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px); background-size: 60px 60px;"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center">
+    <h1 class:list={['font-extrabold tracking-tight leading-tight', compact ? 'text-4xl md:text-5xl' : 'text-5xl md:text-6xl lg:text-7xl']}>
+      <span class="gradient-text">{title}</span>
+    </h1>
+    {subtitle && (
+      <p class="mt-6 text-lg md:text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
+        {subtitle}
+      </p>
+    )}
+    {(ctaText || secondaryCtaText) && (
+      <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+        {ctaText && ctaLink && (
+          <a
+            href={ctaLink}
+            class="bg-accent hover:bg-accent/80 text-white font-semibold px-8 py-3.5 rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-accent/25 text-base"
+          >
+            {ctaText}
+          </a>
+        )}
+        {secondaryCtaText && secondaryCtaLink && (
+          <a
+            href={secondaryCtaLink}
+            class="border border-white/20 hover:border-accent/50 text-text-primary font-semibold px-8 py-3.5 rounded-lg transition-all duration-200 hover:bg-white/5 text-base"
+          >
+            {secondaryCtaText}
+          </a>
+        )}
+      </div>
+    )}
+  </div>
+</section>

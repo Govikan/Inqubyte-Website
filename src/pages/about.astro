@@ -1,0 +1,110 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import TeamMember from '../components/TeamMember.astro';
+import CTABanner from '../components/CTABanner.astro';
+import { siteConfig } from '../data/siteConfig';
+---
+
+<BaseLayout
+  title="About Us"
+  description="InQubyte is a team of AI researchers, cloud architects, and engineers on a mission to make intelligent technology accessible to every business."
+>
+  <Hero
+    title="About InQubyte"
+    subtitle="AI researchers, cloud architects, and engineers building the intelligent systems of tomorrow"
+    compact
+  />
+
+  <!-- Mission -->
+  <section class="py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div class="fade-in-up">
+          <h2 class="text-3xl md:text-4xl font-bold text-text-primary mb-6">Our Mission</h2>
+          <div class="h-1 w-16 rounded-full bg-gradient-to-r from-accent to-accent-tertiary mb-6"></div>
+          <p class="text-text-secondary text-lg leading-relaxed mb-6">
+            To democratize AI and cloud technology for businesses of every size. We believe the most powerful AI isn't locked in research labs — it's deployed in production, solving real problems, and driving measurable outcomes.
+          </p>
+          <p class="text-text-secondary text-lg leading-relaxed">
+            Founded by engineers from leading AI and cloud companies, InQubyte combines deep research expertise with battle-tested production engineering. We bridge the gap between cutting-edge AI and reliable, scalable systems.
+          </p>
+        </div>
+        <div class="fade-in-up" style="transition-delay: 200ms">
+          <div class="glass p-8 lg:p-10">
+            <blockquote class="text-xl font-medium text-text-primary italic leading-relaxed">
+              "The best AI is invisible — it just makes everything work smarter."
+            </blockquote>
+            <div class="mt-4 text-text-secondary text-sm">— InQubyte Founding Principle</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="py-20 lg:py-28 bg-bg-secondary/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="fade-in-up">
+        <SectionHeading
+          title="Our Values"
+          subtitle="The principles that guide how we build AI and cloud solutions"
+        />
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        {siteConfig.values.map((value, i) => (
+          <div class="fade-in-up glass p-6 text-center" style={`transition-delay: ${i * 100}ms`}>
+            <div class="text-4xl mb-4">{value.icon}</div>
+            <h3 class="text-lg font-semibold text-text-primary mb-3">{value.title}</h3>
+            <p class="text-text-secondary text-sm leading-relaxed">{value.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="fade-in-up">
+        <SectionHeading
+          title="Meet the Team"
+          subtitle="AI researchers, cloud architects, and full-stack engineers"
+        />
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        {siteConfig.team.map((member, i) => (
+          <div class="fade-in-up" style={`transition-delay: ${i * 100}ms`}>
+            <TeamMember
+              name={member.name}
+              role={member.role}
+              linkedin={member.linkedin}
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="py-16 border-y border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+        {siteConfig.stats.map((stat, i) => (
+          <div class="text-center fade-in-up" style={`transition-delay: ${i * 100}ms`}>
+            <div class="text-3xl md:text-4xl font-extrabold gradient-text">{stat.value}</div>
+            <div class="text-text-secondary text-sm mt-2">{stat.label}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTABanner
+    heading="Join Our Mission"
+    description="Whether you're looking to build with us or work alongside us — let's connect."
+    buttonText="Get in Touch"
+    buttonLink="/contact/"
+  />
+</BaseLayout>

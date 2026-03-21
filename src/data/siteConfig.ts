@@ -6,7 +6,7 @@ export const siteConfig = {
   ogImage: '/og-image.png',
   email: 'contact@inqubyte.com',
   phone: '+1 (555) 000-0000',
-  address: 'San Francisco, CA',
+  address: 'Seattle, WA',
   socials: {
     linkedin: 'https://linkedin.com/company/inqubyte',
     github: 'https://github.com/inqubyte',

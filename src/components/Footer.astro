@@ -1,5 +1,6 @@
 ---
 import { siteConfig } from '../data/siteConfig';
+const base = import.meta.env.BASE_URL;
 const year = new Date().getFullYear();
 ---
 
@@ -8,7 +9,7 @@ const year = new Date().getFullYear();
     <div class="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-16">
       <!-- Company Info -->
       <div>
-        <a href="/" class="inline-block mb-4">
+        <a href={base} class="inline-block mb-4">
           <span class="text-2xl font-extrabold tracking-tight">
             <span class="text-accent">In</span><span class="text-text-primary">Qubyte</span>
           </span>
@@ -36,7 +37,7 @@ const year = new Date().getFullYear();
         <ul class="space-y-3">
           {siteConfig.navLinks.map((link) => (
             <li>
-              <a href={link.href} class="text-text-secondary text-sm hover:text-accent transition-colors duration-200">
+              <a href={`${base}${link.href}`} class="text-text-secondary text-sm hover:text-accent transition-colors duration-200">
                 {link.label}
               </a>
             </li>

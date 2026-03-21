@@ -1,5 +1,6 @@
 ---
 import { siteConfig } from '../data/siteConfig';
+const base = import.meta.env.BASE_URL;
 const currentPath = Astro.url.pathname;
 ---
 
@@ -7,7 +8,7 @@ const currentPath = Astro.url.pathname;
   <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16 lg:h-20">
       <!-- Logo -->
-      <a href="/" class="flex items-center gap-2 group">
+      <a href={base} class="flex items-center gap-2 group">
         <span class="text-2xl font-extrabold tracking-tight">
           <span class="text-accent">In</span><span class="text-text-primary">Qubyte</span>
         </span>
@@ -15,21 +16,24 @@ const currentPath = Astro.url.pathname;
 
       <!-- Desktop Nav -->
       <div class="hidden md:flex items-center gap-8">
-        {siteConfig.navLinks.map((link) => (
-          <a
-            href={link.href}
-            class:list={[
-              'text-sm font-medium transition-colors duration-200 hover:text-accent',
-              currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href))
-                ? 'text-accent'
-                : 'text-text-secondary',
-            ]}
-          >
-            {link.label}
-          </a>
-        ))}
+        {siteConfig.navLinks.map((link) => {
+          const fullHref = `${base}${link.href}`;
+          return (
+            <a
+              href={fullHref}
+              class:list={[
+                'text-sm font-medium transition-colors duration-200 hover:text-accent',
+                currentPath === fullHref || (link.href !== '' && currentPath.startsWith(fullHref))
+                  ? 'text-accent'
+                  : 'text-text-secondary',
+              ]}
+            >
+              {link.label}
+            </a>
+          );
+        })}
         <a
-          href="/contact/"
+          href={`${base}contact/`}
           class="bg-accent hover:bg-accent/80 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-accent/25"
         >
           Get a Quote
@@ -55,21 +59,24 @@ const currentPath = Astro.url.pathname;
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden md:hidden glass-strong rounded-xl mb-4 overflow-hidden">
       <div class="px-4 py-6 space-y-4">
-        {siteConfig.navLinks.map((link) => (
-          <a
-            href={link.href}
-            class:list={[
-              'block text-base font-medium transition-colors duration-200 hover:text-accent',
-              currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href))
-                ? 'text-accent'
-                : 'text-text-secondary',
-            ]}
-          >
-            {link.label}
-          </a>
-        ))}
+        {siteConfig.navLinks.map((link) => {
+          const fullHref = `${base}${link.href}`;
+          return (
+            <a
+              href={fullHref}
+              class:list={[
+                'block text-base font-medium transition-colors duration-200 hover:text-accent',
+                currentPath === fullHref || (link.href !== '' && currentPath.startsWith(fullHref))
+                  ? 'text-accent'
+                  : 'text-text-secondary',
+              ]}
+            >
+              {link.label}
+            </a>
+          );
+        })}
         <a
-          href="/contact/"
+          href={`${base}contact/`}
           class="block text-center bg-accent hover:bg-accent/80 text-white font-semibold px-5 py-2.5 rounded-lg transition-colors duration-200 mt-4"
         >
           Get a Quote

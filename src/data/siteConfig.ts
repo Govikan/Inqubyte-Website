@@ -13,10 +13,10 @@ export const siteConfig = {
     twitter: 'https://x.com/inqubyte',
   },
   navLinks: [
-    { label: 'Home', href: '/' },
-    { label: 'About', href: '/about/' },
-    { label: 'Services', href: '/services/' },
-    { label: 'Contact', href: '/contact/' },
+    { label: 'Home', href: '' },
+    { label: 'About', href: 'about/' },
+    { label: 'Services', href: 'services/' },
+    { label: 'Contact', href: 'contact/' },
   ],
   services: [
     {

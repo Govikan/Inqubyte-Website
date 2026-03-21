@@ -5,6 +5,7 @@ import SectionHeading from '../components/SectionHeading.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 import CTABanner from '../components/CTABanner.astro';
 import { siteConfig } from '../data/siteConfig';
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout
@@ -16,9 +17,9 @@ import { siteConfig } from '../data/siteConfig';
     title="AI-Powered Innovation Meets Cloud Engineering"
     subtitle="We build intelligent systems and cloud-native platforms that give businesses a competitive edge — from generative AI to scalable infrastructure."
     ctaText="Start Your AI Journey"
-    ctaLink="/contact/"
+    ctaLink={`${base}contact/`}
     secondaryCtaText="Explore Services"
-    secondaryCtaLink="/services/"
+    secondaryCtaLink={`${base}services/`}
   />
 
   <!-- Services Overview -->
@@ -114,6 +115,6 @@ import { siteConfig } from '../data/siteConfig';
     heading="Ready to Harness the Power of AI?"
     description="Let's explore how AI and cloud technology can accelerate your business. Book a free consultation."
     buttonText="Book a Consultation"
-    buttonLink="/contact/"
+    buttonLink={`${base}contact/`}
   />
 </BaseLayout>

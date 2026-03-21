@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create:*)",
+      "Bash(nvm --version)",
+      "Bash(source ~/.nvm/nvm.sh)",
+      "Bash(nvm ls:*)",
+      "Bash(fnm --version)",
+      "Bash(nvm install:*)",
+      "Bash(nvm use:*)",
+      "Read(//private/tmp/**)",
+      "Bash(rm -rf astro-init)",
+      "Bash(mkdir astro-init:*)",
+      "Bash(npx astro:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(nvm which:*)",
+      "Bash(git init:*)",
+      "Bash(gh auth:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git remote:*)",
+      "Bash(git push:*)",
+      "Bash(ssh -T git@github.com)"
+    ]
+  }
+}

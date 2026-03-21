@@ -5,8 +5,8 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://govikan.github.io',
-  base: '/Inqubyte-Website/',
+  site: 'https://inqubyte.com',
+  base: '/',
   output: 'static',
   vite: {
     plugins: [tailwindcss()]

@@ -2,7 +2,7 @@ export const siteConfig = {
   name: 'InQubyte',
   tagline: 'AI-Powered Innovation & Cloud Engineering',
   description: 'InQubyte builds intelligent software powered by AI, cloud-native architectures, and cutting-edge technology. From generative AI solutions to scalable cloud infrastructure, we engineer the future.',
-  url: 'https://govikan.github.io/InQubyte-Website',
+  url: 'https://govikan.github.io/Inqubyte-Website',
   ogImage: '/og-image.png',
   email: 'contact@inqubyte.com',
   phone: '+1 (555) 000-0000',

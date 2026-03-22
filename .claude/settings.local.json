@@ -60,7 +60,22 @@
       "Bash(sips -g pixelWidth -g pixelHeight /Users/krishna.kandipilli/work/InQubyte-Website/public/logo-icon-dark.png)",
       "Bash(python3 /Users/krishna.kandipilli/work/toastmasters-zoom-app/generate_icon.py)",
       "Bash(node /Users/krishna.kandipilli/work/toastmasters-zoom-app/generate_icon.mjs)",
-      "Bash(ls -la /Users/krishna.kandipilli/work/toastmasters-zoom-app/*.md)"
+      "Bash(ls -la /Users/krishna.kandipilli/work/toastmasters-zoom-app/*.md)",
+      "Bash(python3 /Users/krishna.kandipilli/work/toastmasters-zoom-app/generate_ssdlc_pdf.py)",
+      "Bash(pdftoppm -png -r 150 -f 1 -l 1 /Users/krishna.kandipilli/work/toastmasters-zoom-app/Toastmasters_SSDLC.pdf /tmp/ssdlc_p1)",
+      "Bash(pdftoppm -png -r 150 -f 2 -l 2 /Users/krishna.kandipilli/work/toastmasters-zoom-app/Toastmasters_SSDLC.pdf /tmp/ssdlc_p2)",
+      "Bash(pdftoppm -png -r 150 -f 3 -l 3 /Users/krishna.kandipilli/work/toastmasters-zoom-app/Toastmasters_SSDLC.pdf /tmp/ssdlc_p3)",
+      "Bash(ls /tmp/ssdlc_p*)",
+      "Bash(echo \"EXIT: $?\")",
+      "Bash(python3 /Users/krishna.kandipilli/work/toastmasters-zoom-app/generate_sast_evidence.py)",
+      "Bash(pdftoppm -png -r 150 -f 1 -l 1 /Users/krishna.kandipilli/work/toastmasters-zoom-app/Toastmasters_SAST_Evidence.pdf /tmp/sast_p1)",
+      "Bash(pdftoppm -png -r 150 -f 3 -l 3 /Users/krishna.kandipilli/work/toastmasters-zoom-app/Toastmasters_SAST_Evidence.pdf /tmp/sast_p3)",
+      "Bash(pdftoppm -png -r 150 -f 5 -l 5 /Users/krishna.kandipilli/work/toastmasters-zoom-app/Toastmasters_SAST_Evidence.pdf /tmp/sast_p5)",
+      "Bash(ls /tmp/sast_p*)",
+      "Bash(python3 /Users/krishna.kandipilli/work/toastmasters-zoom-app/generate_pentest_statement.py)",
+      "Bash(pdftoppm -png -r 150 -f 1 -l 1 /Users/krishna.kandipilli/work/toastmasters-zoom-app/Toastmasters_PenTest_Statement.pdf /tmp/pen_p1)",
+      "Bash(pdftoppm -png -r 150 -f 2 -l 2 /Users/krishna.kandipilli/work/toastmasters-zoom-app/Toastmasters_PenTest_Statement.pdf /tmp/pen_p2)",
+      "Bash(pdftoppm -png -r 150 -f 3 -l 3 /Users/krishna.kandipilli/work/toastmasters-zoom-app/Toastmasters_PenTest_Statement.pdf /tmp/pen_p3)"
     ]
   }
 }

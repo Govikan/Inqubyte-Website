@@ -5,7 +5,7 @@ export const siteConfig = {
   url: 'https://inqubyte.com',
   ogImage: '/og-image.png',
   email: 'contact@inqubyte.com',
-  phone: '+1 (555) 000-0000',
+  phone: '+1 (360) 453-7105',
   address: 'Seattle, WA',
   socials: {
     linkedin: 'https://linkedin.com/company/inqubyte',

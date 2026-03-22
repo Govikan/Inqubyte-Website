@@ -59,7 +59,8 @@
       "Bash(python3 /Users/krishna.kandipilli/work/toastmasters-zoom-app/generate_banner.py)",
       "Bash(sips -g pixelWidth -g pixelHeight /Users/krishna.kandipilli/work/InQubyte-Website/public/logo-icon-dark.png)",
       "Bash(python3 /Users/krishna.kandipilli/work/toastmasters-zoom-app/generate_icon.py)",
-      "Bash(node /Users/krishna.kandipilli/work/toastmasters-zoom-app/generate_icon.mjs)"
+      "Bash(node /Users/krishna.kandipilli/work/toastmasters-zoom-app/generate_icon.mjs)",
+      "Bash(ls -la /Users/krishna.kandipilli/work/toastmasters-zoom-app/*.md)"
     ]
   }
 }

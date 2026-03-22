@@ -6,6 +6,13 @@
       "runtimeExecutable": "bash",
       "runtimeArgs": ["-c", "source ~/.nvm/nvm.sh && nvm use 22 && npx astro dev"],
       "port": 4321
+    },
+    {
+      "name": "toastmasters-dev",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["-c", "cd /Users/krishna.kandipilli/work/toastmasters-zoom-app && source ~/.nvm/nvm.sh && nvm use 22 && npx next dev"],
+      "port": 3000,
+      "autoPort": true
     }
   ]
 }

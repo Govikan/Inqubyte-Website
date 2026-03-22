@@ -69,10 +69,19 @@ const year = new Date().getFullYear();
     </div>
 
     <!-- Bottom Bar -->
-    <div class="border-t border-white/10 mt-10 pt-8 text-center">
+    <div class="border-t border-white/10 mt-10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
       <p class="text-text-secondary text-xs">
         &copy; {year} {siteConfig.name}. All rights reserved.
       </p>
+      <div class="flex items-center gap-4">
+        <a href={`${base}privacy/`} class="text-text-secondary text-xs hover:text-accent transition-colors duration-200">
+          Privacy Policy
+        </a>
+        <span class="text-white/20">|</span>
+        <a href={`${base}terms/`} class="text-text-secondary text-xs hover:text-accent transition-colors duration-200">
+          Terms of Use
+        </a>
+      </div>
     </div>
   </div>
 </footer>

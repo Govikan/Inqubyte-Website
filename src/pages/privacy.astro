@@ -1,0 +1,270 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import { siteConfig } from '../data/siteConfig';
+const base = import.meta.env.BASE_URL;
+const lastUpdated = 'March 21, 2026';
+---
+
+<BaseLayout
+  title="Privacy Policy"
+  description="InQubyte's privacy policy explains how we collect, use, and protect your personal information when you use our website and services."
+>
+  <Hero
+    title="Privacy Policy"
+    subtitle={`Last updated: ${lastUpdated}`}
+    compact
+  />
+
+  <section class="py-20 lg:py-28">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="prose prose-invert prose-lg max-w-none space-y-12">
+
+        <!-- Introduction -->
+        <div class="fade-in-up">
+          <h2 class="text-2xl md:text-3xl font-bold text-text-primary mb-4">1. Introduction</h2>
+          <div class="h-1 w-12 rounded-full bg-gradient-to-r from-accent to-accent-tertiary mb-6"></div>
+          <p class="text-text-secondary leading-relaxed">
+            InQubyte ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website at <a href={siteConfig.url} class="text-accent hover:text-accent-secondary transition-colors">{siteConfig.url}</a> and use our services. Please read this policy carefully. By accessing or using our website, you agree to the terms of this Privacy Policy.
+          </p>
+        </div>
+
+        <!-- Information We Collect -->
+        <div class="fade-in-up">
+          <h2 class="text-2xl md:text-3xl font-bold text-text-primary mb-4">2. Information We Collect</h2>
+          <div class="h-1 w-12 rounded-full bg-gradient-to-r from-accent to-accent-tertiary mb-6"></div>
+
+          <h3 class="text-xl font-semibold text-text-primary mt-6 mb-3">2.1 Information You Provide</h3>
+          <p class="text-text-secondary leading-relaxed mb-4">
+            We collect information you voluntarily provide when you:
+          </p>
+          <ul class="space-y-2 text-text-secondary">
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-1.5">&#9679;</span>
+              <span>Fill out our contact form (name, email address, company name, message)</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-1.5">&#9679;</span>
+              <span>Subscribe to our newsletter or communications</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-1.5">&#9679;</span>
+              <span>Request a consultation or proposal for our services</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-1.5">&#9679;</span>
+              <span>Communicate with us via email, phone, or other channels</span>
+            </li>
+          </ul>
+
+          <h3 class="text-xl font-semibold text-text-primary mt-8 mb-3">2.2 Automatically Collected Information</h3>
+          <p class="text-text-secondary leading-relaxed mb-4">
+            When you visit our website, we may automatically collect certain information, including:
+          </p>
+          <ul class="space-y-2 text-text-secondary">
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-1.5">&#9679;</span>
+              <span>Device information (browser type, operating system, device type)</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-1.5">&#9679;</span>
+              <span>Log data (IP address, access times, pages viewed, referring URL)</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-1.5">&#9679;</span>
+              <span>Usage data (how you interact with our website and services)</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-1.5">&#9679;</span>
+              <span>Location data (general geographic location based on IP address)</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- How We Use Your Information -->
+        <div class="fade-in-up">
+          <h2 class="text-2xl md:text-3xl font-bold text-text-primary mb-4">3. How We Use Your Information</h2>
+          <div class="h-1 w-12 rounded-full bg-gradient-to-r from-accent to-accent-tertiary mb-6"></div>
+          <p class="text-text-secondary leading-relaxed mb-4">We use the information we collect to:</p>
+          <ul class="space-y-2 text-text-secondary">
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-1.5">&#9679;</span>
+              <span>Respond to your inquiries and provide requested services</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-1.5">&#9679;</span>
+              <span>Process and manage service agreements and contracts</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-1.5">&#9679;</span>
+              <span>Send you relevant updates, newsletters, and marketing communications (with your consent)</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-1.5">&#9679;</span>
+              <span>Improve our website, services, and user experience</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-1.5">&#9679;</span>
+              <span>Analyze website usage and trends to optimize performance</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-1.5">&#9679;</span>
+              <span>Comply with legal obligations and enforce our terms</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Cookies -->
+        <div class="fade-in-up">
+          <h2 class="text-2xl md:text-3xl font-bold text-text-primary mb-4">4. Cookies & Tracking Technologies</h2>
+          <div class="h-1 w-12 rounded-full bg-gradient-to-r from-accent to-accent-tertiary mb-6"></div>
+          <p class="text-text-secondary leading-relaxed mb-4">
+            Our website may use cookies and similar tracking technologies to enhance your browsing experience. These include:
+          </p>
+          <div class="grid gap-4 mt-4">
+            <div class="bg-white/5 border border-white/10 rounded-xl p-5">
+              <h4 class="text-text-primary font-semibold mb-2">Essential Cookies</h4>
+              <p class="text-text-secondary text-sm">Required for basic website functionality. These cannot be disabled.</p>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-5">
+              <h4 class="text-text-primary font-semibold mb-2">Analytics Cookies</h4>
+              <p class="text-text-secondary text-sm">Help us understand how visitors interact with our website, allowing us to improve content and user experience.</p>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-5">
+              <h4 class="text-text-primary font-semibold mb-2">Functional Cookies</h4>
+              <p class="text-text-secondary text-sm">Remember your preferences and settings to provide a more personalized experience.</p>
+            </div>
+          </div>
+          <p class="text-text-secondary leading-relaxed mt-4">
+            You can control cookies through your browser settings. Disabling certain cookies may affect website functionality.
+          </p>
+        </div>
+
+        <!-- Data Sharing -->
+        <div class="fade-in-up">
+          <h2 class="text-2xl md:text-3xl font-bold text-text-primary mb-4">5. How We Share Your Information</h2>
+          <div class="h-1 w-12 rounded-full bg-gradient-to-r from-accent to-accent-tertiary mb-6"></div>
+          <p class="text-text-secondary leading-relaxed mb-4">
+            We do <strong class="text-text-primary">not</strong> sell your personal information. We may share your information only in the following circumstances:
+          </p>
+          <ul class="space-y-2 text-text-secondary">
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-1.5">&#9679;</span>
+              <span><strong class="text-text-primary">Service Providers:</strong> Trusted third-party vendors who assist in operating our website and delivering services (e.g., hosting, email delivery, analytics)</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-1.5">&#9679;</span>
+              <span><strong class="text-text-primary">Legal Requirements:</strong> When required by law, regulation, or legal process</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-1.5">&#9679;</span>
+              <span><strong class="text-text-primary">Business Transfers:</strong> In connection with a merger, acquisition, or sale of assets</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-1.5">&#9679;</span>
+              <span><strong class="text-text-primary">With Your Consent:</strong> When you have given us explicit permission to share your information</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Data Security -->
+        <div class="fade-in-up">
+          <h2 class="text-2xl md:text-3xl font-bold text-text-primary mb-4">6. Data Security</h2>
+          <div class="h-1 w-12 rounded-full bg-gradient-to-r from-accent to-accent-tertiary mb-6"></div>
+          <p class="text-text-secondary leading-relaxed">
+            We implement industry-standard security measures to protect your personal information, including encryption, secure data storage, and access controls. However, no method of transmission over the Internet or electronic storage is 100% secure. While we strive to protect your information, we cannot guarantee its absolute security.
+          </p>
+        </div>
+
+        <!-- Data Retention -->
+        <div class="fade-in-up">
+          <h2 class="text-2xl md:text-3xl font-bold text-text-primary mb-4">7. Data Retention</h2>
+          <div class="h-1 w-12 rounded-full bg-gradient-to-r from-accent to-accent-tertiary mb-6"></div>
+          <p class="text-text-secondary leading-relaxed">
+            We retain your personal information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law. When your data is no longer needed, we will securely delete or anonymize it.
+          </p>
+        </div>
+
+        <!-- Your Rights -->
+        <div class="fade-in-up">
+          <h2 class="text-2xl md:text-3xl font-bold text-text-primary mb-4">8. Your Rights</h2>
+          <div class="h-1 w-12 rounded-full bg-gradient-to-r from-accent to-accent-tertiary mb-6"></div>
+          <p class="text-text-secondary leading-relaxed mb-4">
+            Depending on your location, you may have the following rights regarding your personal data:
+          </p>
+          <div class="grid sm:grid-cols-2 gap-4 mt-4">
+            <div class="bg-white/5 border border-white/10 rounded-xl p-5">
+              <h4 class="text-text-primary font-semibold mb-2">Right to Access</h4>
+              <p class="text-text-secondary text-sm">Request a copy of the personal data we hold about you.</p>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-5">
+              <h4 class="text-text-primary font-semibold mb-2">Right to Correction</h4>
+              <p class="text-text-secondary text-sm">Request correction of inaccurate or incomplete personal data.</p>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-5">
+              <h4 class="text-text-primary font-semibold mb-2">Right to Deletion</h4>
+              <p class="text-text-secondary text-sm">Request deletion of your personal data under certain conditions.</p>
+            </div>
+            <div class="bg-white/5 border border-white/10 rounded-xl p-5">
+              <h4 class="text-text-primary font-semibold mb-2">Right to Opt-Out</h4>
+              <p class="text-text-secondary text-sm">Opt out of marketing communications at any time.</p>
+            </div>
+          </div>
+          <p class="text-text-secondary leading-relaxed mt-4">
+            To exercise any of these rights, contact us at <a href={`mailto:${siteConfig.email}`} class="text-accent hover:text-accent-secondary transition-colors">{siteConfig.email}</a>.
+          </p>
+        </div>
+
+        <!-- Third-Party Links -->
+        <div class="fade-in-up">
+          <h2 class="text-2xl md:text-3xl font-bold text-text-primary mb-4">9. Third-Party Links</h2>
+          <div class="h-1 w-12 rounded-full bg-gradient-to-r from-accent to-accent-tertiary mb-6"></div>
+          <p class="text-text-secondary leading-relaxed">
+            Our website may contain links to third-party websites or services. We are not responsible for the privacy practices of these external sites. We encourage you to review the privacy policies of any third-party sites you visit.
+          </p>
+        </div>
+
+        <!-- Children's Privacy -->
+        <div class="fade-in-up">
+          <h2 class="text-2xl md:text-3xl font-bold text-text-primary mb-4">10. Children's Privacy</h2>
+          <div class="h-1 w-12 rounded-full bg-gradient-to-r from-accent to-accent-tertiary mb-6"></div>
+          <p class="text-text-secondary leading-relaxed">
+            Our website and services are not directed to individuals under the age of 16. We do not knowingly collect personal information from children. If we become aware that a child under 16 has provided us with personal information, we will take steps to delete such data.
+          </p>
+        </div>
+
+        <!-- Changes to Policy -->
+        <div class="fade-in-up">
+          <h2 class="text-2xl md:text-3xl font-bold text-text-primary mb-4">11. Changes to This Policy</h2>
+          <div class="h-1 w-12 rounded-full bg-gradient-to-r from-accent to-accent-tertiary mb-6"></div>
+          <p class="text-text-secondary leading-relaxed">
+            We may update this Privacy Policy from time to time to reflect changes in our practices or for legal, operational, or regulatory reasons. We will notify you of any material changes by posting the updated policy on this page with a revised "Last Updated" date. We encourage you to review this page periodically.
+          </p>
+        </div>
+
+        <!-- Contact Us -->
+        <div class="fade-in-up">
+          <h2 class="text-2xl md:text-3xl font-bold text-text-primary mb-4">12. Contact Us</h2>
+          <div class="h-1 w-12 rounded-full bg-gradient-to-r from-accent to-accent-tertiary mb-6"></div>
+          <p class="text-text-secondary leading-relaxed mb-4">
+            If you have any questions or concerns about this Privacy Policy or our data practices, please contact us:
+          </p>
+          <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+            <p class="text-text-primary font-semibold text-lg mb-3">{siteConfig.name}</p>
+            <ul class="space-y-2 text-text-secondary text-sm">
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                <a href={`mailto:${siteConfig.email}`} class="text-accent hover:text-accent-secondary transition-colors">{siteConfig.email}</a>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                <span>{siteConfig.address}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</BaseLayout>
